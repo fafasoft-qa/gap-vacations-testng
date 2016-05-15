@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Vacations" verbose="1" >
+	<parameter name="appURL" value="http://vacations.evercoding.com"/>
+	<parameter name="browserType" value="firefox"/>
+  <test name="User Workflow Test">
+    <classes>
+      <class name="gap.vacations.test.EmployeeTest">
+      <methods>
+        <include name="givenUserLoginOnVacationsManagement" />
+        <include name="whenUserCreatesNewEmployee" />  
+        <include name="whenUserVerifiesNewEmployeeInfoOnPublicSite" /> 
+        <include name="thenUserDeletesEmployeeCreatedAndVerifiesItOnPublicSite" />       
+      </methods>
+      </class>            
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
