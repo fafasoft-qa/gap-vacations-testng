@@ -75,6 +75,7 @@ public class Page {
 	public boolean isElementPresent(String cssKey, Integer timeout){
 		try{
 			WebDriverWait wait = new WebDriverWait(driver, timeout);
+			@SuppressWarnings("unused")
 			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(LOCATORS.getProperty(cssKey))));
 			return true;
 		}catch(Exception e){
@@ -86,6 +87,7 @@ public class Page {
 		List<WebElement> elements = null;
 		try{
 			WebDriverWait wait = new WebDriverWait(driver, timeout);
+			@SuppressWarnings("unused")
 			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(LOCATORS.getProperty(cssKey))));
 			elements = driver.findElements(By.cssSelector(LOCATORS.getProperty(cssKey)));			
 		}catch(Exception e){
@@ -121,7 +123,7 @@ public class Page {
 	public void takeScreenshot(String fileName) {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	    try {
-			FileUtils.copyFile(scrFile, new File("screenshots\\"+fileName));
+			FileUtils.copyFile(scrFile, new File("screenshots\\"+ fileName + ".jpg" ));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,14 +1,13 @@
-package gap.vacations.test;
-
-import pages.EmployeesInfoPage;
-import pages.FindEmployeePage;
-import pages.LoginPage;
-import pages.NewEmployeePage;
+package test;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import base.TestSuiteSetup;
+import pages.EmployeesInfoPage;
+import pages.FindEmployeePage;
+import pages.LoginPage;
+import pages.NewEmployeePage;
 
 public class EmployeeTest extends TestSuiteSetup{	
 	

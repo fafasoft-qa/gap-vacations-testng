@@ -5,7 +5,7 @@
 	<parameter name="browserType" value="firefox"/>
   <test name="User Workflow Test">
     <classes>
-      <class name="gap.vacations.test.EmployeeTest">
+      <class name="test.EmployeeTest">
       <methods>
         <include name="givenUserLoginOnVacationsManagement" />
         <include name="whenUserCreatesNewEmployee" />  
